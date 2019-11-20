@@ -1,0 +1,77 @@
+val number = 1
+fun isEven(num :Int) = when (num % 2) {
+    0 -> "even"
+    else -> "odd"}
+
+println(isEven(number))
+
+println("hello World")
+
+val numbers = arrayOf(1,2,3,4,5)
+println(numbers[0])
+
+for (num in numbers){
+    println(num)
+}
+
+for(i in 1..13 step 3){
+    println(i)
+}
+
+
+class Person( var name:String){
+
+}
+
+val person = Person("ㅇㅁ")  //()안의 "Dandy"같은 value없으면 왜 안됨?? 객체 생성 아님?
+person.name = "Mr.LongLeg"
+println(person.name)
+
+person.name = "Tomboy"
+println(person.name)
+
+abstract class A {
+    abstract fun func()
+    abstract fun func2()
+}
+
+/*
+class B : A() {
+    override fun func(){
+        println("i'm abstract function")
+    }
+}
+
+val a = B()
+*/
+
+interface Runnable {
+    fun run()
+    fun fastRun() = println("Run Fast!!")
+
+}
+
+class Human : Runnable{
+    var name = "KPJ"
+    override fun run(){
+        println("${name} is running")
+    }
+
+    override fun fastRun() {
+        println("Run Fast!! ${name}")
+    }
+
+
+    }
+
+
+val human = Human()
+
+
+human.run()
+
+human.fastRun()
+
+human.name = "Minsu"
+human.run()
+human.fastRun()     
