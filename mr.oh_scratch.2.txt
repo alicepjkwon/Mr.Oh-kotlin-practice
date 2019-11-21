@@ -1,0 +1,113 @@
+val number = 1
+fun isEven(num :Int) = when (num % 2) {
+    0 -> "even"
+    else -> "odd"}
+
+println(isEven(number))
+
+println("hello World")
+
+val numbers = arrayOf(1,2,3,4,5)
+println(numbers[0])
+
+for (num in numbers){
+    println(num)
+}
+
+for(i in 1..13 step 3){
+    println(i)
+}
+
+
+class Person( var name:String){
+
+}
+
+val person = Person("¤·¤±")  //()¾ÈÀÇ "Dandy"°°Àº value¾øÀ¸¸é ¿Ö ¾ÈµÊ?? °´Ã¼ »ý¼º ¾Æ´Ô?
+person.name = "Mr.LongLeg"
+println(person.name)
+
+person.name = "Tomboy"
+println(person.name)
+
+abstract class A {
+    abstract fun func()
+    abstract fun func2()
+}
+
+/*
+class B : A() {
+    override fun func(){
+        println("i'm abstract function")
+    }
+}
+
+val a = B()
+*/
+
+interface Runnable {
+    fun run()
+    fun fastRun() = println("Run Fast!!")
+
+}
+
+class Human : Runnable{
+    var name = "KPJ"
+    override fun run(){
+        println("${name} is running")
+    }
+
+    override fun fastRun() {
+        println("Run Fast!! ${name}")
+    }
+
+
+    }
+
+
+val human = Human()
+
+
+human.run()
+
+human.fastRun()
+
+human.name = "Minsu"
+human.run()
+human.fastRun()
+
+
+val foods :List<String> = mutableListOf("R", "G", "Rice")
+println(foods[1])
+
+/*
+foods.add("ÃÊ¹ä")
+
+foods.removeAt(0)
+*/
+
+foods.get(1)
+foods[1]
+
+fun add(x:Int, y: Int) :Int {
+    return x+y
+}
+
+add(1,2)
+
+fun multiple(x:Int, y: Int) = x*y
+
+multiple(3,4)
+
+var divide = {x:Int, y:Int -> x/y}
+
+
+println(divide(18,6))
+
+
+
+
+
+
+
+
